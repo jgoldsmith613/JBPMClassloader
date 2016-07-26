@@ -12,11 +12,6 @@
 		<project.version>0.0.1-SNAPSHOT</project.version>
 	</properties>
 
-	<modules>
-		<module>classloader_war</module>
-	</modules>
-
-
 	<dependencyManagement>
 		<dependencies>
 			<dependency>

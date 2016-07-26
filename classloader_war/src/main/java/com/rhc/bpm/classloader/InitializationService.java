@@ -21,20 +21,21 @@ import javax.transaction.SystemException;
 import javax.transaction.UserTransaction;
 
 import org.drools.persistence.jta.JtaTransactionManager;
+import org.kie.api.KieServices;
 import org.kie.api.runtime.manager.RuntimeEnvironment;
 import org.kie.api.runtime.manager.RuntimeEnvironmentBuilder;
 import org.kie.api.runtime.manager.RuntimeManager;
 import org.kie.api.runtime.manager.RuntimeManagerFactory;
 import org.kie.internal.runtime.manager.context.ProcessInstanceIdContext;
 
-@Singleton
-@Startup
-@TransactionManagement(value = TransactionManagementType.BEAN)
-@TransactionAttribute(value = TransactionAttributeType.REQUIRED)
+//@Singleton
+//@Startup
+//@TransactionManagement(value = TransactionManagementType.BEAN)
+//@TransactionAttribute(value = TransactionAttributeType.REQUIRED)
 public class InitializationService {
 
 
-	@PostConstruct
+	//@PostConstruct
 	public void init() throws IOException, NamingException, NotSupportedException, SystemException, SecurityException,
 			IllegalStateException, RollbackException, HeuristicMixedException, HeuristicRollbackException {
 		
@@ -55,6 +56,7 @@ public class InitializationService {
 				.startProcess("samples.scriptProcess");
 		runtimeManagerTwo.getRuntimeEngine(ProcessInstanceIdContext.get()).getKieSession()
 		.startProcess("samples.scriptProcess");
+		
 
 	}
 	

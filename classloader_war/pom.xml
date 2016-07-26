@@ -45,6 +45,12 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.kie</groupId>
+			<artifactId>kie-ci</artifactId>
+			<version>${kie.version}</version>
+		</dependency>
+
+		<dependency>
 			<groupId>org.jbpm</groupId>
 			<artifactId>jbpm-runtime-manager</artifactId>
 		</dependency>
@@ -59,13 +65,20 @@
 			<artifactId>jbpm-executor</artifactId>
 		</dependency>
 
-		<!-- Older versions of guava which some artifact is including as a dependency does not play well with cdi -->
+		<dependency>
+			<groupId>org.jbpm</groupId>
+			<artifactId>jbpm-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Older versions of guava which some artifact is including as a dependency 
+			does not play well with cdi -->
 
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
 			<version>16.0</version>
-		</dependency> 
+		</dependency>
 
 
 
